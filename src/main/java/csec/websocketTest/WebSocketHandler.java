@@ -20,7 +20,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
         var sessionId = session.getId();
         sessions.put(sessionId,session);
 
-        Message message = Message.builder().sender(sessionId).receiver("all").build();
+        Message message = Message.builder().sender(sessionId).chatroomId("all").build();
         message.newConnect();
 
         sessions.values().forEach(s ->{
